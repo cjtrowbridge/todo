@@ -13,7 +13,7 @@ function showHomeBodyCallback(){
       <div class="col-xs-12">
         <h1>Todo</h1>
         <div class="dropdown" style="float: right;">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical"></span>
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical"></span>
           <span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a href="#">HTML</a></li>
