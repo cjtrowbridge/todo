@@ -5,8 +5,6 @@ include('events.php');
 include('loader.php');
 
 Loader('core');
-//Loader('auth/email');
-//Loader('auth/Facebook');
 Loader('auth/Google');
 
 //Loader('microservices/images');
@@ -27,11 +25,6 @@ if(LoggedIn()){
 }else{
   
   Event('User Is Not Logged In');
-  
-  if(isset($_GET['signup'])){
-    PromptForSignup();
-  }else{
-    PromptForLogin();
-  }
+  PromptForLogin();
   
 }
