@@ -22,8 +22,8 @@ function showHomeBodyCallback(){
             <li class="divider"></li>
             <li><a href="./?logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
           </ul>
-          <h1>Todo</h1>
         </div>
+        <h1>Todo</h1>
       </div>
     </div>
     <div class="row">
