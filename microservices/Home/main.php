@@ -25,4 +25,5 @@ function showHomeBodyCallback(){
     </div>
   </div>
   <?php
+  pd($_SESSION);
 }
