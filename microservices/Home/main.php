@@ -11,7 +11,7 @@ function showHomeBodyCallback(){
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h1>Todo</h1>
+        
         <div class="dropdown" style="float: right;">
           <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical"></span>
           <span class="caret"></span></button>
@@ -22,6 +22,7 @@ function showHomeBodyCallback(){
             <li class="divider"></li>
             <li><a href="./?logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
           </ul>
+          <h1>Todo</h1>
         </div>
       </div>
     </div>
