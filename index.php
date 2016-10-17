@@ -16,6 +16,8 @@ Event('Before Checking If User Is Logged In');
 
 if(LoggedIn()){
   
+  Loader('microservices/Home');
+  
   Event('User Is Logged In - Before Presentation');
   
   Event('User Is Logged In - Presentation');
