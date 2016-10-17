@@ -66,6 +66,16 @@ function AttemptGoogleAuth(){
         'Expires'               => (time()+DEFAULTSESSIONLENGTH)
       );
       $_SESSION['User']=$results[0];
+      
+      //Update user data
+      Query("
+        UPDATE `todo`.`User` 
+        SET 
+          `Photo`     = '".mysql_real_escape_string($_SESSION['google_oauth2']['user_object']->picture)."', 
+          `FirstName` = '".mysql_real_escape_string($_SESSION['google_oauth2']['user_object']->givenName)."', 
+          `LastName`  = '".mysql_real_escape_string($_SESSION['google_oauth2']['user_object']->familyName)."' 
+        WHERE `Email` LIKE '".mysql_real_escape_string($_SESSION['google_oauth2']['user_object']->email)."';
+      ");
     
   }else{
     $authUrl = $client->createAuthUrl();
