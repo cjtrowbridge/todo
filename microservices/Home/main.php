@@ -20,7 +20,7 @@ function showHomeBodyCallback(){
             <li><a href="#">CSS</a></li>
             <li><a href="#">JavaScript</a></li>
             <li class="divider"></li>
-            <li><a href="./?logout"><span class="glyphicon glyphicon-log-out"> Logout</a></li>
+            <li><a href="./?logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
           </ul>
         </div>
       </div>
