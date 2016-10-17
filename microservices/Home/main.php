@@ -3,6 +3,10 @@
 Hook('User Is Logged In - Presentation','showHome();');
 
 function showHome(){
+  SimplePage('Todo','showHomeBodyCallback();');
+}
+  
+function showHomeBodyCallback(){
   ?>
   <div class="container">
     <div class="row">
