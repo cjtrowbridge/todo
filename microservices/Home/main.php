@@ -11,16 +11,18 @@ function showHomeBodyCallback(){
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
+        <h1>Todo</h1>
         <div class="dropdown" style="float: right;">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-option-vertical"></span>
           <span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a href="#">HTML</a></li>
             <li><a href="#">CSS</a></li>
             <li><a href="#">JavaScript</a></li>
+            <li class="divider"></li>
+            <li><a href="./?logout"><span class="glyphicon glyphicon-log-out"> Logout</a></li>
           </ul>
         </div>
-        <h1>Todo</h1>
       </div>
     </div>
     <div class="row">
