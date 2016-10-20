@@ -93,8 +93,9 @@ function authGoogleCallback(){
   <?php
   pd($_GET);
   pd($_POST);
-  $path = strtok($_SERVER['REQUEST_URI'], '?');
-  $segments = implode('/', ltrim($path, '/'));
-  pd($segments);
+  pd($_SERVER);
+  //$path = strtok($_SERVER['REQUEST_URI'], '?');
+  //$segments = implode('/', ltrim($path, '/'));
+  //pd($segments);
   
 }
