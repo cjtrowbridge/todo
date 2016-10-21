@@ -2,18 +2,18 @@
 
 Hook('User Is Logged In - Presentation','showHome();');
 
-function showHome(){
-  SimplePage('Todo','showHomeBodyCallback();');
+function showList(){
+  SimplePage('Todo','showListBodyCallback();');
 }
   
-function showHomeBodyCallback(){
+function showListBodyCallback(){
   ?>
   <style>
     body{
      padding-top: 2em; 
     }
   </style>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">
         
