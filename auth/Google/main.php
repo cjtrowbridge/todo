@@ -91,7 +91,4 @@ function authGoogleCallback(){
   ?>
     <p><a class="login" href="<?php echo $_SESSION['google_oauth2']['auth_url']; ?>"><img src="/img/google-login-button.png" /></a></p>
   <?php
-  $segments = explode('/', ltrim($_SERVER['REQUEST_URI'], '/'));
-  pd($segments);
-  
 }
