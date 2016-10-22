@@ -1,19 +1,15 @@
 <?php
 
 function showListOfListsBodyCallback(){
-  //TODO check if valid list or default to oldest list
   
-  
-  $sql="
+  $Results=Query("
     SELECT 
       *
     FROM List
     LEFT JOIN Item ON Item.ListID = List.ListID
     WHERE
-      UserID = 1 AND
-      List.Name LIKE '".."'
-  ";
-  Query();
+      UserID = ".intval($_SESSION['User']['UserID'])."
+  ");
   
   
   ?>
@@ -54,11 +50,9 @@ function showListOfListsBodyCallback(){
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        <?php
+          pd($Results);
+        ?>
       </div>
     </div>
   </div>
