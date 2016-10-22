@@ -3,7 +3,7 @@
 function showValidList(){
   
   MakeSureDBConnected();
-  $Items=Query("
+  $sql="
     SELECT 
       Item.ItemID,
       Item.Description,
@@ -15,7 +15,8 @@ function showValidList(){
       List.UserID = ".intval($_SESSION['User']['UserID'])." AND
       List.Slug LIKE '".mysql_real_escape_string($segments[0])."'
     ORDER BY Due DESC
-  ");
+  ";
+  $Items=Query($sql);
   
   ?>
   <style>
@@ -28,7 +29,8 @@ function showValidList(){
       <div class="col-xs-12">
         <ul>
            <?php
-  pd($Items);
+            pd($sql);
+            pd($Items);
           
             foreach($Items as $Item){
               echo "          <li>".$Item['Description']."</li>\n";
