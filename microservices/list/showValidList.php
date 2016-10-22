@@ -39,6 +39,7 @@ function showValidList(){
             }
           
           ?>
+          <li class="context">Add New Item</li>
         </ul>
       </div>
       <div class="col-xs-3">
@@ -55,6 +56,7 @@ function showValidList(){
             }
           
           ?>
+          <li class="context">Add New Item</li>
         </ul>
       </div>
       <div class="col-xs-3">
@@ -72,6 +74,7 @@ function showValidList(){
             }
           
           ?>
+          <li class="context">Add New Item</li>
         </ul>
       </div>
       <div class="col-xs-3">
@@ -88,6 +91,7 @@ function showValidList(){
             }
           
           ?>
+          <li class="context">Add New Item</li>
         </ul>
         
       </div>
