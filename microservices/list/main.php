@@ -1,12 +1,38 @@
 <?php
 
-//Hook('User Is Logged In - Presentation','showList();');
+Hook('User Is Logged In - Presentation','showList();');
 
 function showList(){
+  
   SimplePage('Todo','showListBodyCallback();');
 }
   
 function showListBodyCallback(){
+  //TODO check if valid list or default to oldest list
+  $segments = explode('/', ltrim($_SERVER['REQUEST_URI'], '/'));
+  pd($segments);  
+  
+  /*
+  if(
+    
+  ){
+    
+  }else{
+    
+  }
+  
+  $sql="
+    SELECT 
+      *
+    FROM List
+    LEFT JOIN Item ON Item.ListID = List.ListID
+    WHERE
+      UserID = 1 AND
+      List.Name LIKE '".."'
+  ";
+  Query();
+  */
+  
   ?>
   <style>
     body{
