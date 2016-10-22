@@ -1,15 +1,9 @@
 body{
  padding-top: 2em; 
 }
-ul li.context{
+h3 shh{
  display: none;
 }
-ul:hover li.context{
- display: block;
- text-align: center;
- padding: 1em;
- background-color: #d3d3d3;
- border: 1px solid #000;
- border-radius: 1em;
- margin-top: 2em;
+h3:hover shh{
+ display: inline;
 }
