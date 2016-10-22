@@ -63,7 +63,6 @@ function SimplePage($PageTitle=APPNAME,$BodyCallback = '', $HeadCallback = ''){
       </div>
     </div>
   </div>
-</div>
 	  
 	<?php
 		eval($BodyCallback);
