@@ -1,6 +1,24 @@
 <?php
 
 Hook('User Is Logged In - Presentation','showList();');
+Hook('User Is Logged In - Before Presentation','maybeCacheListOfLists();');
+
+function maybeCacheListOfLists(){
+  if(!(isset($_SESSION['Lists']))){
+    cacheListOfLists();
+  }
+}
+
+function cacheListOfLists(){
+  $Results=Query("
+    SELECT 
+      *
+    FROM List
+    WHERE
+      List.UserID = ".intval($_SESSION['User']['UserID'])."
+  ");
+  $_SESSION['Lists']=$Results;
+}
 
 function showList(){
   $segments = explode('/', ltrim($_SERVER['REQUEST_URI'], '/'));
