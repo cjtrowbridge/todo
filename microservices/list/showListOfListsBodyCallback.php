@@ -8,7 +8,7 @@ function showListOfListsBodyCallback(){
     FROM List
     LEFT JOIN Item ON Item.ListID = List.ListID
     WHERE
-      UserID = ".intval($_SESSION['User']['UserID'])."
+      List.UserID = ".intval($_SESSION['User']['UserID'])."
   ");
   
   
