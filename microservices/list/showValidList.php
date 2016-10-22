@@ -58,7 +58,7 @@ function showValidList(){
         </ul>
       </div>
       <div class="col-xs-3">
-        <h3>This Year <shh><a href="/new/?due=<?php echo date("Y-12-t"); ?>">New</a></shh></h3>
+        <h3>This Year <shh><a href="/new/?due=<?php echo date("Y-12-30"); ?>">New</a></shh></h3>
         <ul>
            <?php
           
