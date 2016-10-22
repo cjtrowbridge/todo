@@ -24,7 +24,7 @@ function showValidList(){
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-3">
-        <h3>Every Day</h3>
+        <h3>Every Day <shh><a href="">New</a></shh>/h3>
         <ul>
            <?php
           
@@ -39,11 +39,10 @@ function showValidList(){
             }
           
           ?>
-          <li class="context">Add New Item</li>
         </ul>
       </div>
       <div class="col-xs-3">
-        <h3>This Month</h3>
+        <h3>This Month <shh><a href="">New</a></shh></h3>
         <ul>
            <?php
           
@@ -56,11 +55,10 @@ function showValidList(){
             }
           
           ?>
-          <li class="context">Add New Item</li>
         </ul>
       </div>
       <div class="col-xs-3">
-        <h3>This Year</h3>
+        <h3>This Year <shh><a href="">New</a></shh></h3>
         <ul>
            <?php
           
@@ -74,11 +72,10 @@ function showValidList(){
             }
           
           ?>
-          <li class="context">Add New Item</li>
         </ul>
       </div>
       <div class="col-xs-3">
-        <h3>Next Year</h3>
+        <h3>Next Year <shh><a href="">New</a></shh></h3>
         <ul>
            <?php
           
@@ -91,7 +88,6 @@ function showValidList(){
             }
           
           ?>
-          <li class="context">Add New Item</li>
         </ul>
         
       </div>
