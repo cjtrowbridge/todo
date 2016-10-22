@@ -42,7 +42,7 @@ function showValidList(){
         </ul>
       </div>
       <div class="col-xs-3">
-        <h3>This Month <shh><a href="/new/?due=<?php echo date("y-m-t"); ?>">New</a></shh></h3>
+        <h3>This Month <shh><a href="/new/?due=<?php echo date("Y-m-t"); ?>">New</a></shh></h3>
         <ul>
            <?php
           
@@ -58,7 +58,7 @@ function showValidList(){
         </ul>
       </div>
       <div class="col-xs-3">
-        <h3>This Year <shh><a href="/new/?due=<?php echo date("y-12-t"); ?>">New</a></shh></h3>
+        <h3>This Year <shh><a href="/new/?due=<?php echo date("Y-12-t"); ?>">New</a></shh></h3>
         <ul>
            <?php
           
@@ -75,7 +75,7 @@ function showValidList(){
         </ul>
       </div>
       <div class="col-xs-3">
-        <h3>Next Year <shh><a href="/new/?due=<?php echo date("Y-12-30",strtotime(date("y-12-t"))+1); ?>">New</a></shh></h3>
+        <h3>Next Year <shh><a href="/new/?due=<?php echo date("Y-12-30",strtotime(date("Y-12-t"))+1); ?>">New</a></shh></h3>
         <ul>
            <?php
           
