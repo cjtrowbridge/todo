@@ -1,6 +1,6 @@
 <?php
 
-Hook('User Is Logged In - Presentation','showHome();');
+//Hook('User Is Logged In - Presentation','showList();');
 
 function showList(){
   SimplePage('Todo','showListBodyCallback();');
