@@ -5,7 +5,10 @@ function showValidList(){
   MakeSureDBConnected();
   $Items=Query("
     SELECT 
-      *
+      Item.ItemID,
+      Item.Description,
+      Item.State,
+      Item.Due
     FROM List
     LEFT JOIN Item ON Item.ListID = List.ListID
     WHERE
@@ -24,9 +27,13 @@ function showValidList(){
     <div class="row">
       <div class="col-xs-12">
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+           <?php
+          
+            foreach($Items as $Item){
+              echo "          <li>".$Item['Description']."</li>\n";
+            }
+          
+          ?>
         </ul>
       </div>
     </div>
