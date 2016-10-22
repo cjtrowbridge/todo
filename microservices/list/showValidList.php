@@ -23,7 +23,7 @@ function showValidList(){
   ?>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <h3>Every Day</h3>
         <ul>
            <?php
@@ -41,7 +41,7 @@ function showValidList(){
           ?>
         </ul>
       </div>
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <h3>This Month</h3>
         <ul>
            <?php
@@ -57,7 +57,7 @@ function showValidList(){
           ?>
         </ul>
       </div>
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <h3>This Year</h3>
         <ul>
            <?php
@@ -73,6 +73,22 @@ function showValidList(){
           
           ?>
         </ul>
+        
+        <h3>Next Year</h3>
+        <ul>
+           <?php
+          
+            foreach($Items as $Item){
+              if(
+                date("Y",strtotime($Item['Due']))==(date("Y")+1)
+              ){
+                echo "          <li>".$Item['Description']."</li>\n";
+              }
+            }
+          
+          ?>
+        </ul>
+        
       </div>
     </div>
   </div>
