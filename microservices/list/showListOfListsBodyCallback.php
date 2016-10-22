@@ -6,7 +6,6 @@ function showListOfListsBodyCallback(){
     SELECT 
       *
     FROM List
-    LEFT JOIN Item ON Item.ListID = List.ListID
     WHERE
       List.UserID = ".intval($_SESSION['User']['UserID'])."
   ");
@@ -50,9 +49,15 @@ function showListOfListsBodyCallback(){
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <?php
-          pd($Results);
-        ?>
+        <ul>
+          
+          <?php
+            foreach($Results as $Result){
+             echo "          <li><a href=\"/".$Result['Slug']."\">".$Result['Name']."</a></li>\n"; 
+            }
+          ?>
+        
+        </ul>
       </div>
     </div>
   </div>
