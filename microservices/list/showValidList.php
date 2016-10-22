@@ -23,12 +23,52 @@ function showValidList(){
   ?>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-3">
+        <h3>Every Day</h3>
         <ul>
            <?php
           
             foreach($Items as $Item){
-              echo "          <li>".$Item['Description']."</li>\n";
+              if(
+                ($Item['Due']=='') ||
+                is_null($Item['Due'])|
+                (!(isset($Item['Due'])))
+              ){
+                echo "          <li>".$Item['Description']."</li>\n";
+              }
+            }
+          
+          ?>
+        </ul>
+      </div>
+      <div class="col-xs-3">
+        <h3>This Month</h3>
+        <ul>
+           <?php
+          
+            foreach($Items as $Item){
+              if(
+                date("Y-m",strtotime($Item['Due']))==date("Y-m")
+              ){
+                echo "          <li>".$Item['Description']."</li>\n";
+              }
+            }
+          
+          ?>
+        </ul>
+      </div>
+      <div class="col-xs-3">
+        <h3>This Year</h3>
+        <ul>
+           <?php
+          
+            foreach($Items as $Item){
+              if(
+                date("Y",strtotime($Item['Due']))==date("Y")&&
+                (!(date("Y-m",strtotime($Item['Due']))==date("Y-m")))
+              ){
+                echo "          <li>".$Item['Description']."</li>\n";
+              }
             }
           
           ?>
