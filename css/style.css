@@ -1,9 +1,9 @@
 body{
  padding-top: 2em; 
 }
-li .context{
+ul li.context{
  display: none;
 }
-li:hover .context{
+ul:hover li.context{
  display: block;
 }
