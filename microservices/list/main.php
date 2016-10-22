@@ -25,6 +25,13 @@ function showList(){
   
   if(
     isset($segments[0])&&
+    $segments[0]=='new'
+  ){
+    die('white rabbit');
+  }
+  
+  if(
+    isset($segments[0])&&
     (!(trim($segments[0])==''))
   ){
     
