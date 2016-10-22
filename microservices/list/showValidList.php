@@ -28,6 +28,7 @@ function showValidList(){
       <div class="col-xs-12">
         <ul>
            <?php
+  pd($Items);
           
             foreach($Items as $Item){
               echo "          <li>".$Item['Description']."</li>\n";
