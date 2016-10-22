@@ -21,18 +21,11 @@ function showValidList(){
   $Items=Query($sql);
   
   ?>
-  <style>
-    body{
-     padding-top: 2em; 
-    }
-  </style>
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">
         <ul>
            <?php
-            pd($sql);
-            pd($Items);
           
             foreach($Items as $Item){
               echo "          <li>".$Item['Description']."</li>\n";
