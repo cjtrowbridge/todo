@@ -2,6 +2,8 @@
 
 function showValidList(){
   
+  $segments = explode('/', ltrim($_SERVER['REQUEST_URI'], '/'));
+
   MakeSureDBConnected();
   $sql="
     SELECT 
