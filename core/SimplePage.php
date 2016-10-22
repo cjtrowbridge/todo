@@ -22,6 +22,49 @@ function SimplePage($PageTitle=APPNAME,$BodyCallback = '', $HeadCallback = ''){
 	?>
 </head>
 <body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="./"><?php echo ucwords(APPNAME); ?></a>
+            </div>
+            <?php
+            if(isset($_SESSION['Lists'])){
+            ?>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical"></span></a>
+                  <ul class="dropdown-menu">
+                    <?php  
+                      if(isset($_SESSION['Lists'])){
+                        foreach($_SESSION['Lists'] as $List){
+                         echo "          <li><a href=\"/".$List['Slug']."\">".$List['Name']."</a></li>\n"; 
+                        }
+                    ?>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">New List</a></li>
+                    <li class="divider"></li>
+                    
+                    <li><a href="./?logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+            <?php
+            }
+            ?>
+          </div><!--/.container-fluid -->
+        </nav>
+        
+      </div>
+    </div>
+  </div>
+</div>
+	  
 	<?php
 		eval($BodyCallback);
 	?>
