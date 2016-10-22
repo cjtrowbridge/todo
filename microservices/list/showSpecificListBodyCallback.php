@@ -14,9 +14,9 @@ function showSpecificListBodyCallback(){
   ");
   
   if(count($Results)==0){
-    
+    showInvalidList();
   }else{
-    
+    showValidList();
   }
   
 }
