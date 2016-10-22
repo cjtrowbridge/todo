@@ -23,4 +23,6 @@ function Query(
 		default:
 			die('Unsupported database type: '.$DATABASES[$Database]['type']);
 	}
+	error_reporting(E_ALL);
+
 }
