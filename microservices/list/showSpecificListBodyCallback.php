@@ -3,6 +3,7 @@
 function showSpecificListBodyCallback(){
   
   $segments = explode('/', ltrim($_SERVER['REQUEST_URI'], '/'));
+  MakeSureDBConnected();
   $Results=Query("
     SELECT 
       *
