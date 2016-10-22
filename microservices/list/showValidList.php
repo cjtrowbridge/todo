@@ -24,7 +24,7 @@ function showValidList(){
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-3">
-        <h3>Every Day <shh><a href="">New</a></shh>/h3>
+        <h3>Every Day <shh><a href="">New</a></shh></h3>
         <ul>
            <?php
           
