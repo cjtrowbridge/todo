@@ -1,16 +1,6 @@
 <?php
 
 function showListOfListsBodyCallback(){
-  
-  $Results=Query("
-    SELECT 
-      *
-    FROM List
-    WHERE
-      List.UserID = ".intval($_SESSION['User']['UserID'])."
-  ");
-  
-  
   ?>
   <style>
     body{
@@ -52,8 +42,8 @@ function showListOfListsBodyCallback(){
         <ul>
           
           <?php
-            foreach($Results as $Result){
-             echo "          <li><a href=\"/".$Result['Slug']."\">".$Result['Name']."</a></li>\n"; 
+            foreach($_SESSION['Lists'] as $List){
+             echo "          <li><a href=\"/".$List['Slug']."\">".$List['Name']."</a></li>\n"; 
             }
           ?>
         
