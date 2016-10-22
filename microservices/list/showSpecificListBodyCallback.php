@@ -1,21 +1,25 @@
 <?php
 
 function showSpecificListBodyCallback(){
-  //TODO check if valid list or default to oldest list
-  
-  
+  /*
+  $segments = explode('/', ltrim($_SERVER['REQUEST_URI'], '/'));
   $sql="
     SELECT 
       *
     FROM List
     LEFT JOIN Item ON Item.ListID = List.ListID
     WHERE
-      UserID = 1 AND
-      List.Name LIKE '".."'
+      UserID = ".intval()." AND
+      List.Slug LIKE '".mysql_real_escape_string."'
   ";
   Query();
+  */
+  pd($_SESSION);
   
   
+}
+
+function showValidList(){
   ?>
   <style>
     body{
