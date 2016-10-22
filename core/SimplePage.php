@@ -40,7 +40,6 @@ function SimplePage($PageTitle=APPNAME,$BodyCallback = '', $HeadCallback = ''){
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical"></span></a>
                   <ul class="dropdown-menu">
                     <?php  
-                      if(isset($_SESSION['Lists'])){
                         foreach($_SESSION['Lists'] as $List){
                          echo "          <li><a href=\"/".$List['Slug']."\">".$List['Name']."</a></li>\n"; 
                         }
