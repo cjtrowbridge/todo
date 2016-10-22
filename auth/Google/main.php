@@ -49,14 +49,14 @@ function AttemptGoogleAuth(){
     
       //TODO update profile details
       MakeSureDBConnected();
-      $results=Query("SELECT UserID,Email,FirstName,LastName,Phone,Photo,Bio FROM `User` WHERE `Email` LIKE '".mysql_real_escape_string($_SESSION['google_oauth2']['user_object']->email)."' LIMIT 1"); 
+      $results=Query("SELECT UserID,Email,FirstName,LastName,Phone,Photo,Bio FROM `User` WHERE `Email` LIKE '%".mysql_real_escape_string($_SESSION['google_oauth2']['user_object']->email)."%' LIMIT 1"); 
       if(count($results)==0){
         
         //SIGNING UP!
         $sql="INSERT INTO `User`(`Email`)VALUES('".mysql_real_escape_string($_SESSION['google_oauth2']['user_object']->email)."');";
         Query($sql);
         
-        $results=Query("SELECT UserID,Email,FirstName,LastName,Phone,Photo,Bio FROM `User` WHERE `Email` LIKE '".mysql_real_escape_string($_SESSION['google_oauth2']['user_object']->email)."' LIMIT 1"); 
+        $results=Query("SELECT UserID,Email,FirstName,LastName,Phone,Photo,Bio FROM `User` WHERE `Email` LIKE '%".mysql_real_escape_string($_SESSION['google_oauth2']['user_object']->email)."%' LIMIT 1"); 
         
       }
       $_SESSION['Auth']=array(
