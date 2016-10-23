@@ -95,7 +95,12 @@ function showValidList(){
   </div>
   <script>
     function AddItem(date){
-      alert('adding item for: '+date);
+      //alert('adding item for: '+date);
+      var newItem = prompt("Create New Item");
+      if (newItem != null) {
+          alert($newItem);
+      }
+
     }
   </script>
   <?php
