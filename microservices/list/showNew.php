@@ -4,7 +4,7 @@ function showNew(){
   MakeSureDBConnected();
   
   //Does this list belong to this user?
-  $Matches=Query("SELECT ListID WHERE ListID = ".mysql_real_escape_string($_GET['list'])." AND UserID = ".intval($_SESSION['User']['UserID'])."");
+  $Matches=Query("SELECT ListID FROM List WHERE ListID = ".mysql_real_escape_string($_GET['list'])." AND UserID = ".intval($_SESSION['User']['UserID'])."");
   if(count($Matches)==0){
    die('Invalid list; no matches found for current user.'); 
   }
