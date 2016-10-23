@@ -1,17 +1,33 @@
 <?php
 
 function showNew(){
-  //TODO verify list belongs to this user
-  /*
-  if(isset($_GET['due'])){
-    if(strtotime($_GET['due'])==0){
-      //this is not a real date
-    }else{
-      //this has a clear date
-    }
+  
+  //Does this list belong to this user?
+  $Matches=Query("SELECT ListID WHERE ListID = ".mysql_real_escape_string($_GET['list'])." AND UserID = ".intval($_SESSION['User']['UserID'])."");
+  if(count($Matches)==0){
+   die('Invalid list; no matches found for current user.'); 
   }
-  */
-  pd($_GET);
-  exit;
+  
+  //Is this a real date?
+  $theDate=strtotime($_GET['due']);
+  if($theDate==0){
+    die('Invalid Date'); 
+  }
+  
+  //Insert new item
+  Query("INSERT INTO `Item` 
+  (
+    `UserID`, 
+    `ListID`, 
+    `Description`, 
+    `Due`
+  )VALUES(
+    '".intval($_SESSION['User']['UserID'])."', 
+    '".mysql_real_escape_string($_GET['list'])."', 
+    '".mysql_real_escape_string($_GET['item'])."', 
+    '".date("Y-m-d",$theDate)."'
+   );");
+  
+  //tell them it worked!
   die('ok');
 }
