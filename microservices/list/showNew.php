@@ -12,4 +12,6 @@ function showNew(){
   }
   */
   
+  
+  die('ok');
 }
