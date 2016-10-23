@@ -99,13 +99,13 @@ function showValidList(){
       
       var newItem = prompt("Create New Item");
       if (newItem != null) {
-          $.get( "/new/", { item: newItem, due: date, list: <?php echo $Items['ListID']; ?> } )
+          $.get( "/new/", { item: newItem, due: date, list: <?php echo $Items[0]['ListID']; ?> } )
           .done(function(data) {
             //location.reload();
             alert(data);
           });
       }
-
+      
     }
   </script>
   <?php
