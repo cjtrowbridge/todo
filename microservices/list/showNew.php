@@ -30,5 +30,6 @@ function showNew(){
    );");
   
   //tell them it worked!
+  pd($_GET);
   die('ok');
 }
