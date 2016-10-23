@@ -101,7 +101,8 @@ function showValidList(){
       if (newItem != null) {
           $.get( "/new/", { item: newItem, due: date, list: <?php echo $Items['ListID']; ?> } )
           .done(function(data) {
-            location.reload();
+            //location.reload();
+            alert(data);
           });
       }
 
