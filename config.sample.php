@@ -1,5 +1,7 @@
 <?php
 
+ini_set("session.gc_maxlifetime", 65535);
+
 //Most of this will need to be updated later
 define('STARTTIME',microtime(true));
 
