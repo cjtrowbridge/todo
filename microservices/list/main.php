@@ -27,7 +27,8 @@ function showList(){
     isset($segments[0])&&
     $segments[0]=='new'
   ){
-    die('white rabbit');
+    include('showNew.php');
+    maybeShowNew();
   }
   
   if(
