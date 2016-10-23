@@ -7,6 +7,7 @@ function showValidList(){
   MakeSureDBConnected();
   $sql="
     SELECT 
+      List.ListID,
       Item.ItemID,
       Item.Description,
       Item.State,
@@ -95,10 +96,13 @@ function showValidList(){
   </div>
   <script>
     function AddItem(date){
-      //alert('adding item for: '+date);
+      
       var newItem = prompt("Create New Item");
       if (newItem != null) {
-          alert($newItem);
+          $.get( "/new/", { item: newItem, due: date, list: <?php echo $Items['ListID']; ?> } )
+          .done(function(data) {
+            location.reload();
+          });
       }
 
     }
