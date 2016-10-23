@@ -11,7 +11,7 @@ function showNew(){
     }
   }
   */
-  
-  
+  pd($_GET);
+  exit;
   die('ok');
 }
