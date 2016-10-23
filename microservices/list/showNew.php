@@ -1,6 +1,7 @@
 <?php
 
 function showNew(){
+  MakeSureDBConnected();
   
   //Does this list belong to this user?
   $Matches=Query("SELECT ListID WHERE ListID = ".mysql_real_escape_string($_GET['list'])." AND UserID = ".intval($_SESSION['User']['UserID'])."");
