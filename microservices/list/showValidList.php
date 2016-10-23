@@ -76,7 +76,7 @@ function showValidList(){
         </ul>
       </div>
       <div class="col-xs-3">
-        <h3>Next Year <shh><a href="javascript:void(0);" onclick="AddItem('<?php echo date("Y-12-30",strtotime(date("Y-12-t"))+1); ?>');">New</a></shh></h3>
+        <h3>Next Year <shh><a href="javascript:void(0);" onclick="AddItem('<?php echo date("Y-12-30",strtotime(date("Y-12-30"))+1); ?>');">New</a></shh></h3>
         <ul>
            <?php
           
