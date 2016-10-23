@@ -28,7 +28,7 @@ function showList(){
     $segments[0]=='new'
   ){
     include('showNew.php');
-    maybeShowNew();
+    showNew();
   }
   
   if(
